@@ -1,15 +1,17 @@
-import React,{Component} from 'react';
-import { directive } from '@babel/types';
+import React, { Component } from 'react';
+import  Component1 from './functional/component1'
+import  Container1 from './container/container1'
 
 
-class  App extends Component {
 
-  render(){
-    const name = 'Sam U Jackson';
-    return(
+class App extends Component {
+  
+  render() {
+    
+    return (
       <div className="App">
-          React
-          {name}
+       <Container1 nick="fury" max="mad" />
+        <Component1 name="Hanaka" age="25"/>
       </div>
     );
   }
