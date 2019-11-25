@@ -10,8 +10,7 @@ class App extends Component {
     
     return (
       <div className="App">
-       <Container1 nick="fury" max="mad" />
-        <Component1 name="Hanaka" age="25"/>
+       <Container1 nick="fury" max="mad" />  
       </div>
     );
   }
