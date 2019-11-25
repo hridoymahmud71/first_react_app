@@ -23,16 +23,47 @@ class App extends Component {
   //     <p>
   //       {props.city.id}
   //     </p>
-    
+
   //   </div>
   // )
-    
+
+  state = {
+    value: ''
+  }
+
+  handleChange = (event) => {
+    console.log(event.target.value)
+    this.setState({
+      value: event.target.value
+    })
+  }
+
+
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event.target.name.value);
+
+  }
+
+
+
 
 
   render() {
 
+
+
     return (
       <div className="App">
+        {this.state.value}
+        <form onSubmit={this.handleSubmit}>
+          <label>Name</label>
+          <input id="name" type="text" onChange={this.handleChange}></input>
+          <button type="submit">Submit</button>
+        </form>
+
+
         {/* {
         this.cities.map((city,idx) => (<this.renderCities city={city} key={idx}/>)) 
         }
